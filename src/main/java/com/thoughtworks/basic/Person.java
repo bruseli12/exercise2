@@ -1,6 +1,7 @@
 package com.thoughtworks.basic;
 
-public class Person {
+public class Person extends Observer{
+
     public String getName() {
         return name;
     }
@@ -26,5 +27,10 @@ public class Person {
     }
     public String introduce(){
         return "My name is "+name+". I am "+age+" years old.";
+    }
+
+    @Override
+    public void update() {
+       System.out.println("");
     }
 }
